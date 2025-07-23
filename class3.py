@@ -49,7 +49,50 @@
 #         break
 
 
+while True:
+    blood_monster = 100
+    gun = 20
+    sword = 10
+    boom = 5
 
+    menu = int(input("กด1 เพื่อต่อสู้กับมอนสเตอร์ หรือ กด2 เพื่อออกจากเกม : "))
+
+    if menu == 1:
+
+        number_of_hits = int(input("จะตีกี่ครั้ง : "))
+        for i in range(number_of_hits):
+            attack = int(input("1.GUN(20) 2.sword(10) 3.boom(5) จงเลือกอาวุธมาสู้ซะ!!! : "))
+            a = blood_monster
+            gun = 20
+            sword = 10
+            boom = 5
+
+            if attack == 1:
+                blood_monster = a- gun
+                print("เลือดมอนเตอร์",blood_monster)
+            elif attack == 2:
+                blood_monster =a- sword
+                print("เลือดมอนเตอร์",blood_monster)
+            elif attack == 3:
+                blood_monster =a- boom
+                print("เลือดมอนเตอร์",blood_monster)
+
+        if blood_monster == 0:
+            print("monsterตาย")
+        if blood_monster> 0:
+            print("ผู้เล่นตาย")
+        if blood_monster < 0:
+            print("monsterยังไม่ตาย")
+
+
+
+
+    if menu == 2:
+        print("ออกจากเกม")
+        break
+
+
+     
 
         
     
